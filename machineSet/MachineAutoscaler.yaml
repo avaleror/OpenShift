@@ -1,0 +1,12 @@
+apiVersion: autoscaling.openshift.io/v1beta1
+kind: MachineAutoscaler
+metadata:
+  name: ma-cluster-vodafone-d69b-ln9fx-worker-eu-central-1c
+  namespace: openshift-machine-api
+spec:
+  minReplicas: 0
+  maxReplicas: 2
+  scaleTargetRef:
+    apiVersion: machine.openshift.io/v1beta1
+    kind: MachineSet
+    name: cluster-vodafone-d69b-ln9fx-worker-eu-central-1c
